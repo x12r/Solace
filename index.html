@@ -635,7 +635,7 @@
         <!-- Download Section -->
         <section class="download-card" id="download">
             <div class="download-header">
-                <h2 class="download-title">Download Solace Injector</h2>
+                <h2 class="download-title">Download Solace</h2>
                 <div class="version">v1.1</div>
             </div>
             
@@ -676,8 +676,8 @@
                     <div class="feature-icon">
                         <i class="fas fa-star"></i>
                     </div>
-                    <h3>Stunning Visual Design</h3>
-                    <p>Enjoy a beautiful purple-themed interface with animated star backgrounds and smooth transitions that match modern design standards.</p>
+                    <h3>Visual Design</h3>
+                    <p>Enjoy a beautiful purple themed interface.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -765,7 +765,7 @@
             </div>
             
             <div class="copyright">
-                <p>© 2023 Solace Injector. Made by chao. All rights reserved.</p>
+                <p>© 2067 Solace Injector. Made by chao. All rights reserved.</p>
                 <p>This software is not affiliated with Gorilla Tag or its developers.</p>
             </div>
         </footer>
@@ -820,28 +820,34 @@
             });
         });
 
-        // Download simulation
+        // REAL DOWNLOAD FUNCTION - Downloads Solace.zip from GitHub
         function startDownload() {
             // Show loading animation
             document.getElementById('loading').style.display = 'flex';
             
-            // Simulate download delay
+            // YOUR ACTUAL DOWNLOAD LINK
+            const downloadUrl = 'https://raw.githubusercontent.com/x12r/solacefiles/main/Solace.zip';
+            
+            // Create and trigger download after a short delay
             setTimeout(() => {
+                // Create download link
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = 'Solace_Injector_v1.1.zip'; // Name of file when saved
+                document.body.appendChild(link);
+                
+                // Trigger download
+                link.click();
+                
+                // Clean up
+                document.body.removeChild(link);
+                
                 // Hide loading animation
                 document.getElementById('loading').style.display = 'none';
                 
                 // Show success message
                 document.getElementById('success').style.display = 'block';
-                
-                // Create a fake download link
-                const downloadUrl = 'https://files.catbox.moe/mwr6ki.dll';
-                const link = document.createElement('a');
-                link.href = downloadUrl;
-                link.download = 'Solace_Injector_v1.1.exe';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }, 2000);
+            }, 1500); // 1.5 second delay for better UX
         }
 
         function closeSuccess() {
