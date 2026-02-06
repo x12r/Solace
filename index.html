@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    // sweden yur gae  i love you
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solace - Download</title>
@@ -22,7 +23,6 @@
             position: relative;
         }
 
-        /* Star Background */
         #stars {
             position: fixed;
             top: 0;
@@ -36,15 +36,14 @@
             position: absolute;
             background-color: #fff;
             border-radius: 50%;
-            animation: twinkle 3s infinite;
+            animation: blooop 3s infinite;
         }
 
-        @keyframes twinkle {
+        @keyframes blooop {
             0%, 100% { opacity: 0.2; }
             50% { opacity: 1; }
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -53,7 +52,6 @@
             z-index: 1;
         }
 
-        /* Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -73,10 +71,10 @@
             font-size: 42px;
             color: #b446ff;
             text-shadow: 0 0 20px rgba(180, 70, 255, 0.7);
-            animation: pulse 2s infinite;
+            animation: imafem 2s infinite;
         }
 
-        @keyframes pulse {
+        @keyframes imafem {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
@@ -129,7 +127,6 @@
             width: 80%;
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 60px 20px;
@@ -170,7 +167,6 @@
             line-height: 1.6;
         }
 
-        /* Download Card */
         .download-card {
             background: rgba(40, 20, 70, 0.8);
             border-radius: 20px;
@@ -290,7 +286,6 @@
             transform: translateY(-3px);
         }
 
-        /* Features Section */
         .features {
             margin-bottom: 80px;
         }
@@ -358,7 +353,6 @@
             line-height: 1.6;
         }
 
-        /* Instructions */
         .instructions {
             margin-bottom: 80px;
         }
@@ -412,7 +406,6 @@
             line-height: 1.6;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -462,7 +455,6 @@
             margin-top: 20px;
         }
 
-        /* Mobile Responsive */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -505,7 +497,6 @@
             }
         }
 
-        /* Loading Animation */
         .loading {
             display: none;
             position: fixed;
@@ -526,16 +517,15 @@
             border: 8px solid rgba(180, 70, 255, 0.2);
             border-top: 8px solid #b446ff;
             border-radius: 50%;
-            animation: spin 1s linear infinite;
+            animation: swedengay 1s linear infinite;
             margin-bottom: 20px;
         }
 
-        @keyframes spin {
+        @keyframes swedengay {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        /* Success Message */
         .success {
             display: none;
             position: fixed;
@@ -588,27 +578,23 @@
     </style>
 </head>
 <body>
-    <!-- Star Background -->
     <div id="stars"></div>
 
-    <!-- Loading Animation -->
     <div class="loading" id="loading">
         <div class="spinner"></div>
         <h3>Preparing your download...</h3>
     </div>
 
-    <!-- Success Message -->
     <div class="success" id="success">
         <div class="success-icon">
             <i class="fas fa-check-circle"></i>
         </div>
         <h3>Download Started!</h3>
         <p>Your download should begin automatically. If it doesn't, check your browser's download manager.</p>
-        <button class="close-success" onclick="closeSuccess()">Continue Browsing</button>
+        <button class="close-success" onclick="femboy()">Continue Browsing</button>
     </div>
 
     <div class="container">
-        <!-- Header -->
         <header>
             <div class="logo">
                 <div class="logo-icon">✦</div>
@@ -625,14 +611,12 @@
             </nav>
         </header>
 
-        <!-- Hero Section -->
         <section class="hero" id="home">
             <h1>Experience Gorilla Tag Like Never Before</h1>
             <p>Solace injector brings premium features and enhancements to your Gorilla Tag experience. With a sleek purple theme, smooth animations, and powerful functionality, elevate your gameplay to new heights.</p>
             <div class="version">Latest Version: v1.1</div>
         </section>
 
-        <!-- Download Section -->
         <section class="download-card" id="download">
             <div class="download-header">
                 <h2 class="download-title">Download Solace</h2>
@@ -659,16 +643,15 @@
             </div>
 
             <div class="download-buttons">
-                <button class="btn btn-primary" onclick="startDownload()">
+                <button class="btn btn-primary" onclick="blah()">
                     <i class="fas fa-download"></i> Download Now
                 </button>
-                <button class="btn btn-secondary" onclick="showInstructions()">
+                <button class="btn btn-secondary" onclick="breh()">
                     <i class="fas fa-book"></i> View Instructions
                 </button>
             </div>
         </section>
 
-        <!-- Features Section -->
         <section class="features" id="features">
             <h2 class="section-title">Why Choose Solace?</h2>
             <div class="features-grid">
@@ -717,7 +700,6 @@
             </div>
         </section>
 
-        <!-- Instructions Section -->
         <section class="instructions" id="instructions">
             <h2 class="section-title">How to Install & Use</h2>
             <div class="steps">
@@ -752,13 +734,9 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer id="support">
             <div class="footer-logo">SOLACE</div>
             <p>Enhancing your Gorilla Tag experience with style and functionality.</p>
-            
-            <div class="social-links">
-            </div>
             
             <div class="copyright">
                 <p>© 2067 Solace Injector. Made by chao. All rights reserved.</p>
@@ -768,7 +746,6 @@
     </div>
 
     <script>
-        // Create star background
         function createStars() {
             const starsContainer = document.getElementById('stars');
             const starCount = 150;
@@ -777,7 +754,6 @@
                 const star = document.createElement('div');
                 star.classList.add('star');
                 
-                // Random position and size
                 const size = Math.random() * 3 + 1;
                 const posX = Math.random() * 100;
                 const posY = Math.random() * 100;
@@ -789,7 +765,6 @@
                 star.style.top = `${posY}%`;
                 star.style.animationDelay = `${delay}s`;
                 
-                // Random color (purple/white variations)
                 const colors = ['#ffffff', '#e6d4ff', '#d4b3ff', '#c292ff'];
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 star.style.backgroundColor = color;
@@ -798,7 +773,6 @@
             }
         }
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -816,41 +790,28 @@
             });
         });
 
-        // REAL DOWNLOAD FUNCTION - Downloads Solace.zip from GitHub
-        function startDownload() {
-            // Show loading animation
+        function blah() {
             document.getElementById('loading').style.display = 'flex';
             
-            // YOUR ACTUAL DOWNLOAD LINK
             const downloadUrl = 'https://raw.githubusercontent.com/x12r/solacefiles/main/Solace.zip';
             
-            // Create and trigger download after a short delay
             setTimeout(() => {
-                // Create download link
                 const link = document.createElement('a');
                 link.href = downloadUrl;
-                link.download = 'Solace_Injector_v1.1.zip'; // Name of file when saved
+                link.download = 'Solace_Injector_v1.1.zip';
                 document.body.appendChild(link);
-                
-                // Trigger download
                 link.click();
-                
-                // Clean up
                 document.body.removeChild(link);
-                
-                // Hide loading animation
                 document.getElementById('loading').style.display = 'none';
-                
-                // Show success message
                 document.getElementById('success').style.display = 'block';
-            }, 1500); // 1.5 second delay for better UX
+            }, 1500);
         }
 
-        function closeSuccess() {
+        function femboy() {
             document.getElementById('success').style.display = 'none';
         }
 
-        function showInstructions() {
+        function breh() {
             const instructionsSection = document.getElementById('instructions');
             window.scrollTo({
                 top: instructionsSection.offsetTop - 100,
@@ -858,7 +819,6 @@
             });
         }
 
-        // Add hover effects to feature cards
         document.querySelectorAll('.feature-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px)';
@@ -869,19 +829,16 @@
             });
         });
 
-        // Add pulse animation to download button every 10 seconds
         setInterval(() => {
             const downloadBtn = document.querySelector('.btn-primary');
-            downloadBtn.style.animation = 'pulse 1s';
+            downloadBtn.style.animation = 'imafem 1s';
             setTimeout(() => {
                 downloadBtn.style.animation = '';
             }, 1000);
         }, 10000);
 
-        // Initialize stars when page loads
         window.addEventListener('DOMContentLoaded', createStars);
         
-        // Add a subtle floating animation to the logo
         const logoIcon = document.querySelector('.logo-icon');
         setInterval(() => {
             logoIcon.style.transform = 'translateY(-5px)';
